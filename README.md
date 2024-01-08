@@ -32,7 +32,7 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 
 </details>
 
-## Orientações
+## Como Executar
 
 <details>
 

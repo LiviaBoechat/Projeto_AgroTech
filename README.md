@@ -26,7 +26,9 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
   de dados, bem como implementar buscas customizadas.
 - Utiização campos de data nas rotas da API e no banco de dados
 - Criação de testes unitários para garantir a qualidade e funcionamento correto da implementação, com
-  cobertura de código adequada. 
+  cobertura de código adequada.
+- Aplicação do conhecimento sobre Spring Security para adicionar autenticação ao projeto.
+- Garantir que diferentes rotas atenda à regras específicas de autorização. 
 
 </details>
 

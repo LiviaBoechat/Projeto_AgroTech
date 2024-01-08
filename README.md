@@ -9,7 +9,7 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 
 
 
-  <summary><strong> Habilidades trabalhadas</strong></summary>
+## Habilidades trabalhadas
 
 - Java
 - Hibernate/JPA

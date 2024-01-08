@@ -12,26 +12,24 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 ## Habilidades trabalhadas
 
 - Java
+- Spring Boot
 - Hibernate/JPA
 - Spring Data JPA (simplificando relação com db)
-- Spring Boot
 - Spring Data (campos de data nas rotas da API e no banco de dados)
 - Spring Security (autenticação).
-- MAven
+- Maven
+- MySQL
 - Aplicação a injeção de dependência para conectar as camadas de controle, serviço e persistência.
-
-
 
 
 ## Especificações do projeto
 
 <details>
-<summary><strong>Gerais</strong></summary>
+<summary><strong>Testes</strong></summary>
   
 - Os testes deste projeto são, de maneira geral, testes de integração. Cada teste fará diversas chamadas à API e validará a resposta e o comportamento da aplicação, mas sem restringir implementações específicas de classes e métodos.
-- O projeto foi implementado utilizando o ecossistema Spring (Spring Boot, Spring Web, Spring Data, etc). 
-- O banco de dados utilizado foi o MySql.
 - Os testes do projeto utilizam um banco "mockado" em memória do tipo H2.
+
 </details>
 
 <details>

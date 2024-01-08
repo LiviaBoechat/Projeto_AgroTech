@@ -68,11 +68,10 @@ Nesse modelos, temos as seguintes tabelas:
  <summary><strong></strong>A autenticação de usuário e senha foi feita através do Spring Security</strong></summary><br />
  
 ### 1. Garante acesso público (ou seja, desprotegido) aos endpoints:
- 
-<details>
+
     - POST `/persons` (permitir cadastro de novas pessoas)
     - POST `/auth/login` (permitir login) 
-</details>
+
 
 ### 2. Sobre a rota POST `/auth/login`:
 

@@ -152,7 +152,7 @@ mvn test -Dtest="TestClassName"
 </details>
 
 <details>
-<summary>🗄️ Descrição do banco de dados</summary><br>
+<summary>Descrição do banco de dados</summary><br>
 
 ![Modelo de tabelas](images/agrix-tabelas-fase-b.png)
 

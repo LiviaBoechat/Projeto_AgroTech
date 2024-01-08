@@ -75,13 +75,12 @@ Nesse modelos, temos as seguintes tabelas:
 
 ### 2. Sobre a rota POST `/auth/login`:
 
-<details>
     - deve receber o `username` e `password` no corpo da requisição
     - deve validar os dados passados utilizando as pessoas que foram criadas pela rota `/persons`
     - caso os dados estejam incorretos, deve retornar status 403
     - caso os dados estejam corretos, deve retornar um campo `token` contendo um JWT gerado
 
-<details>
+
   <summary>🔍 Formato/exemplo de requisição e resposta</summary><br />
 
 Exemplo de requisição na rota POST `/auth/login` (suppondo que os dados estejam corretos):

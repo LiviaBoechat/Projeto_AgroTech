@@ -30,6 +30,116 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 
 </details>
 
+## Especificações do projeto
+
+<details>
+<summary><strong>Gerais</strong></summary>
+  
+- Os testes deste projeto são, de maneira geral, testes de integração. Cada teste fará diversas chamadas à API e validará a resposta e o comportamento da aplicação, mas sem restringir implementações específicas de classes e métodos.
+- O projeto foi implementado utilizando o ecossistema Spring (Spring Boot, Spring Web, Spring Data, etc). 
+- O banco de dados utilizado foi o MySql.
+- Os testes do projeto utilizam um banco "mockado" em memória do tipo H2.
+</details>
+
+<details>
+<summary>Descrição do banco de dados</summary><br>
+
+![Modelo de tabelas](images/agrix-tabelas-fase-b.png)
+
+Nesse modelos, temos as seguintes tabelas:
+- `farm`: representa uma fazenda
+- `crop`: representa uma plantação, e está em relacionamento `n:1` ("muitos para um") com a tabela `farm`
+- `fertilizer`: esta nova tabela representa um fertilizante, e está em um relacionamento `n:n` ("muitos para muitos") com a tabela `crop`. Esse relacionamento é realizado através da tabela `crop_fertilizer`.
+
+</details>
+
+
+## Rotas
+
+
+ 
+ - GET `/farms`
+ - GET `/crops`
+ - GET `/fertilizers`
+ - POST `/persons`
+ - POST `/auth/login` 
+
+
+## Autenticação no projeto
+ <summary>A autenticação de usuário e senha foi feita através do Spring Security</summary><br />
+ 
+### 1. Garante acesso público (ou seja, desprotegido) aos endpoints:
+ 
+<details>
+    - POST `/persons` (permitir cadastro de novas pessoas)
+    - POST `/auth/login` (permitir login) 
+</details>
+
+### 2. Sobre a rota POST `/auth/login`:
+
+<details>
+    - deve receber o `username` e `password` no corpo da requisição
+    - deve validar os dados passados utilizando as pessoas que foram criadas pela rota `/persons`
+    - caso os dados estejam incorretos, deve retornar status 403
+    - caso os dados estejam corretos, deve retornar um campo `token` contendo um JWT gerado
+
+<details>
+  <summary>🔍 Formato/exemplo de requisição e resposta</summary><br />
+
+Exemplo de requisição na rota POST `/auth/login` (suppondo que os dados estejam corretos):
+
+```json
+{
+  "username": "zerocool",
+  "password": "senhasecreta"
+}
+```
+
+Exemplo de resposta:
+
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZ3JpeCIsInN1YiI6Im1ycm9ib3QiLCJleHAiOjE2ODk5ODY2NTN9.lyha4rMcMhFd_ij-farGCXuJy-1Tun1IpJd5Ot6z_5w"
+}
+```
+
+</details>
+
+</details>
+
+### 3. Limita acesso à rota GET /farms
+
+<details>
+  <summary>Limitar acesso à rota GET /farms para pessoa autenticada com role correto</summary><br />
+
+Neste requisito você deve limitar o acesso à rota GET `/farms` para que apenas uma pessoa autenticada com role `USER`, `MANAGER` ou `ADMIN` possa acessar.
+
+Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
+
+</details>
+
+### 4. Limita acesso à rota GET /crops
+
+<details>
+  <summary>Limitar acesso à rota GET /crops para pessoa autenticada com role correto</summary><br />
+
+Apenas uma pessoa autenticada com role `MANAGER` ou `ADMIN` pode acessar.
+
+Deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
+
+</details>
+
+### 5. Limita acesso à rota GET /fertilizers
+
+<details>
+  <summary>Limitar acesso à rota GET /fertilizers para pessoa autenticada com role correto</summary><br />
+
+Deve limitar o acesso à rota GET `/fertilizers` para que apenas uma pessoa autenticada com role `ADMIN` possa acessar.
+
+Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
+
+</details>
+
 ## Como Executar
 
 <details>
@@ -140,114 +250,5 @@ mvn test -Dtest="TestClassName"
 
 </details>
 
-## Especificações do projeto
-
-<details>
-<summary><strong>Gerais</strong></summary>
-  
-- Os testes deste projeto são, de maneira geral, testes de integração. Cada teste fará diversas chamadas à API e validará a resposta e o comportamento da aplicação, mas sem restringir implementações específicas de classes e métodos.
-- O projeto foi implementado utilizando o ecossistema Spring (Spring Boot, Spring Web, Spring Data, etc). 
-- O banco de dados utilizado foi o MySql.
-- Os testes do projeto utilizam um banco "mockado" em memória do tipo H2.
-</details>
-
-<details>
-<summary>Descrição do banco de dados</summary><br>
-
-![Modelo de tabelas](images/agrix-tabelas-fase-b.png)
-
-Nesse modelos, temos as seguintes tabelas:
-- `farm`: representa uma fazenda
-- `crop`: representa uma plantação, e está em relacionamento `n:1` ("muitos para um") com a tabela `farm`
-- `fertilizer`: esta nova tabela representa um fertilizante, e está em um relacionamento `n:n` ("muitos para muitos") com a tabela `crop`. Esse relacionamento é realizado através da tabela `crop_fertilizer`.
-
-</details>
-
-
-## Rotas
-
-
- 
- - GET `/farms`
- - GET `/crops`
- - GET `/fertilizers`
- - POST `/persons`
- - POST `/auth/login` 
-
-
-## Autenticação no projeto
- <summary>A autenticação de usuário e senha foi feita através do Spring Security</summary><br />
- 
-### 1. Garante acesso público (ou seja, desprotegido) aos endpoints:
- 
-<details>
-    - POST `/persons` (permitir cadastro de novas pessoas)
-    - POST `/auth/login` (permitir login) 
-</details>
-
-### 2. Sobre a rota POST `/auth/login`:
-
-<details>
-    - deve receber o `username` e `password` no corpo da requisição
-    - deve validar os dados passados utilizando as pessoas que foram criadas pela rota `/persons`
-    - caso os dados estejam incorretos, deve retornar status 403
-    - caso os dados estejam corretos, deve retornar um campo `token` contendo um JWT gerado
-
-<details>
-  <summary>🔍 Formato/exemplo de requisição e resposta</summary><br />
-
-Exemplo de requisição na rota POST `/auth/login` (suppondo que os dados estejam corretos):
-
-```json
-{
-  "username": "zerocool",
-  "password": "senhasecreta"
-}
-```
-
-Exemplo de resposta:
-
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZ3JpeCIsInN1YiI6Im1ycm9ib3QiLCJleHAiOjE2ODk5ODY2NTN9.lyha4rMcMhFd_ij-farGCXuJy-1Tun1IpJd5Ot6z_5w"
-}
-```
-
-</details>
-
-</details>
-
-### 3. Limita acesso à rota GET /farms
-
-<details>
-  <summary>Limitar acesso à rota GET /farms para pessoa autenticada com role correto</summary><br />
-
-Neste requisito você deve limitar o acesso à rota GET `/farms` para que apenas uma pessoa autenticada com role `USER`, `MANAGER` ou `ADMIN` possa acessar.
-
-Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
-
-</details>
-
-### 4. Limita acesso à rota GET /crops
-
-<details>
-  <summary>Limitar acesso à rota GET /crops para pessoa autenticada com role correto</summary><br />
-
-Apenas uma pessoa autenticada com role `MANAGER` ou `ADMIN` pode acessar.
-
-Deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
-
-</details>
-
-### 5. Limita acesso à rota GET /fertilizers
-
-<details>
-  <summary>Limitar acesso à rota GET /fertilizers para pessoa autenticada com role correto</summary><br />
-
-Deve limitar o acesso à rota GET `/fertilizers` para que apenas uma pessoa autenticada com role `ADMIN` possa acessar.
-
-Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
-
-</details>
 
 <!-- mdi versão 1.1 projeto ⚠️ não exclua esse comentário -->

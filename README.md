@@ -1,7 +1,7 @@
 # `Projeto Agrotech`
 
 <details>
-  <summary>Sobre o Projeto</summary><br />
+  <summary><strong>Sobre o Projeto<strong></summary><br />
 
 Maria e João são pessoas empreendedoras que estão muito preocupadas com os impactos ambientais e
 sociais dos nossos processos agrícolas. Por isso, decidiram criar a AgroTech, uma empresa

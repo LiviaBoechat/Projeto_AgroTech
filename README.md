@@ -146,14 +146,18 @@ Nesse modelos, temos as seguintes tabelas:
 
 
 ## Autenticação no projeto
-
+ <summary>A autenticação de usuário e senha foi feita através do Spring Security</summary><br />
+ 
+### 1. Garante acesso público (ou seja, desprotegido) aos endpoints:
+ 
 <details>
-  <summary>A autenticação de usuário e senha foi feita através do Spring Security</summary><br />
-
-1. Garante acesso público (ou seja, desprotegido) aos endpoints:
     - POST `/persons` (permitir cadastro de novas pessoas)
     - POST `/auth/login` (permitir login) 
-2. Sobre a rota POST `/auth/login`:
+</details>
+
+### 2. Sobre a rota POST `/auth/login`:
+
+<details>
     - deve receber o `username` e `password` no corpo da requisição
     - deve validar os dados passados utilizando as pessoas que foram criadas pela rota `/persons`
     - caso os dados estejam incorretos, deve retornar status 403
@@ -183,7 +187,7 @@ Exemplo de resposta:
 
 </details>
 
-### 1. Limita acesso à rota GET /farms
+### 3. Limita acesso à rota GET /farms
 
 <details>
   <summary>Limitar acesso à rota GET /farms para pessoa autenticada com role correto</summary><br />
@@ -194,7 +198,7 @@ Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do
 
 </details>
 
-### 2. Limita acesso à rota GET /crops
+### 4. Limita acesso à rota GET /crops
 
 <details>
   <summary>Limitar acesso à rota GET /crops para pessoa autenticada com role correto</summary><br />
@@ -205,7 +209,7 @@ Deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contr
 
 </details>
 
-### 3. Limita acesso à rota GET /fertilizers
+### 5. Limita acesso à rota GET /fertilizers
 
 <details>
   <summary>Limitar acesso à rota GET /fertilizers para pessoa autenticada com role correto</summary><br />

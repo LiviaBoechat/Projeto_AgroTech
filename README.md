@@ -107,9 +107,9 @@ Exemplo de resposta:
 <details>
   <summary>Limitar acesso à rota GET /farms para pessoa autenticada com role correto</summary><br />
 
-Neste requisito você deve limitar o acesso à rota GET `/farms` para que apenas uma pessoa autenticada com role `USER`, `MANAGER` ou `ADMIN` possa acessar.
+Limita o acesso à rota GET `/farms` para que apenas uma pessoa autenticada com role `USER`, `MANAGER` ou `ADMIN` possa acessar.
 
-Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
+Retorna status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
 
 </details>
 
@@ -131,7 +131,7 @@ Deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contr
 
 Deve limitar o acesso à rota GET `/fertilizers` para que apenas uma pessoa autenticada com role `ADMIN` possa acessar.
 
-Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
+Retorna status 403 caso a pessoa não tenha permissões corretas. Do contrário, a rota deve retornar a resposta usual.
 
 </details>
 

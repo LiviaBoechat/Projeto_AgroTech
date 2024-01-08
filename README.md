@@ -65,7 +65,7 @@ Nesse modelos, temos as seguintes tabelas:
  - POST `/auth/login` 
 
 
-## Autenticação no projeto
+# Autenticação no projeto
  <summary>A autenticação de usuário e senha foi feita através do Spring Security</summary><br />
  
 ### 1. Garante acesso público (ou seja, desprotegido) aos endpoints:

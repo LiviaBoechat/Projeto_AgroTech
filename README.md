@@ -136,7 +136,7 @@ Nesse modelos, temos as seguintes tabelas:
 
 ## Rotas
 
-<details>
+
  
  - GET `/farms`
  - GET `/crops`
@@ -144,7 +144,6 @@ Nesse modelos, temos as seguintes tabelas:
  - POST `/persons`
  - POST `/auth/login` 
 
-</details>
 
 ## Autenticação no projeto
 

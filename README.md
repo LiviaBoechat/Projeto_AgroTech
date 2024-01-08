@@ -1,7 +1,6 @@
 # `Projeto Agrotech`
 
-<details>
-  <summary><strong>Sobre o Projeto<strong></summary><br />
+
 
 AgroTech, é ma empresa especializada em tecnologias para melhorar a eficiência no cultivo de plantações. Isso visa reduzir
 o desperdício de recursos em geral e de alimentos em específico, fazendo um uso mais responsável da
@@ -11,7 +10,6 @@ O primeiro produto dessa empresa será o Agrix, um sistema que permitirá a gest
 das fazendas participantes. Esse produto será desenvolvido em fases.
 
 
-</details>
 
 <details>
   <summary><strong> Habilidades trabalhadas</strong></summary>

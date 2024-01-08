@@ -18,16 +18,14 @@ iniciais, e que servirá de base para as próximas fases.
 </details>
 
 <details>
-  <summary><strong>📝 Habilidades a serem trabalhadas</strong></summary>
+  <summary><strong> Habilidades trabalhadas</strong></summary>
 
-Neste projeto, verificamos se você é capaz de:
-
-- Aplicar o conhecimento do ecossistema Spring para criar rotas da API.
-- Aplicar a injeção de dependência para conectar as camadas de controle, serviço e persistência.
-- Utilizar o Spring Data JPA para implementar entidades e repositórios para a persistência em banco
+- Aplicação o conhecimento do ecossistema Spring para criar rotas da API.
+- Aplicação a injeção de dependência para conectar as camadas de controle, serviço e persistência.
+- Utilização do Spring Data JPA para implementar entidades e repositórios para a persistência em banco
   de dados.
-- Implementar gerenciamento de erros no Spring Web.
-- Criar o Dockerfile para configurar a aplicação para execução no Docker.
+- Implementação de gerenciamento de erros no Spring Web.
+- Criação do Dockerfile para configurar a aplicação para execução no Docker.
 
 </details>
 

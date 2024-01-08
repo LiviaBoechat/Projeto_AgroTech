@@ -1,6 +1,6 @@
 # `Projeto Agrotech`
 
-Boas-vindas ao repositório do projeto `Projeto Final - Agrix - Fase C`
+
 
 ## Orientações
 

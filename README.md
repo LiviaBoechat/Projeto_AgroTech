@@ -1,7 +1,5 @@
 # `Projeto Agrotech`
 
-
-
 AgroTech, é ma empresa especializada em tecnologias para melhorar a eficiência no cultivo de plantações. Isso visa reduzir
 o desperdício de recursos em geral e de alimentos em específico, fazendo um uso mais responsável da
 terra disponível para plantio.
@@ -11,7 +9,6 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 
 
 
-<details>
   <summary><strong> Habilidades trabalhadas</strong></summary>
 
 - Java
@@ -20,10 +17,11 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 - Spring Boot
 - Spring Data (campos de data nas rotas da API e no banco de dados)
 - Spring Security (autenticação).
+- MAven
 - Aplicação a injeção de dependência para conectar as camadas de controle, serviço e persistência.
 
 
-</details>
+
 
 ## Especificações do projeto
 
@@ -51,8 +49,6 @@ Nesse modelos, temos as seguintes tabelas:
 
 ## Rotas
 
-
- 
  - GET `/farms`
  - GET `/crops`
  - GET `/fertilizers`

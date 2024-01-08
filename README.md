@@ -72,29 +72,11 @@ Boas-vindas ao repositório do projeto `Projeto Final - Agrix - Fase C`
 
 </details>
 
-<details>
-
-<summary><strong>⌨️ Durante o desenvolvimento</strong></summary>
-
-Faça `commits` das alterações que você fizer no código regularmente, pois assim você garante
-visibilidade para o time da Trybe e treina essa prática para o mercado de trabalho :) ;
-
-- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto;
-- Os comandos que você utilizará com mais frequência são:
-    - `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde -
-      no stage)_;
-    - `git add` _(para adicionar arquivos ao stage do Git)_;
-    - `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_;
-    - `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na
-      primeira vez que fizer o `push` de uma nova branch)_;
-    - `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_.
-
-</details>
 
 <details>
 <summary><strong>🎛 Checkstyle</strong></summary>
 
-Para garantir a qualidade do código, vamos utilizar neste projeto o `Checkstyle`. Assim o código
+Para garantir a qualidade do código, utilizo neste projeto o `Checkstyle`. Assim o código
 estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção!
 Para poder rodar o `Checkstyle` certifique-se de ter executado o comando `mvn install` dentro do
 repositório.
@@ -110,9 +92,6 @@ seu terminal. Se não houver problema no seu código, nada será impresso no seu
 
 Você pode também instalar o plugin do `Checkstyle` na sua `IDE`. Para isso, volte na primeira seção
 do conteúdo.
-
-⚠️ **PULL REQUESTS COM ISSUES NO `Checkstyle` NÃO SERÃO AVALIADAS. ATENTE-SE PARA RESOLVÊ-LAS ANTES
-DE FINALIZAR O DESENVOLVIMENTO!** ⚠️
 
 </details>
 

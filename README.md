@@ -102,7 +102,7 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 
 
 <details>
-<summary><strong>🎛 Checkstyle</strong></summary>
+<summary><strong> Checkstyle</strong></summary>
 
 Para garantir a qualidade do código, utilizo neste projeto o `Checkstyle`. Assim o código
 estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção!
@@ -124,7 +124,7 @@ do conteúdo.
 </details>
 
 <details>
-<summary><strong>🛠 Testes</strong></summary>
+<summary><strong>Testes</strong></summary>
 
 Para executar todos os testes basta rodar o comando:
 

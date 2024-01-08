@@ -143,6 +143,8 @@ mvn test -Dtest="TestClassName"
 ## Especificações do projeto
 
 <details>
+<summary><strong>Gerais</strong></summary>
+  
 - Os testes deste projeto são, de maneira geral, testes de integração. Cada teste fará diversas chamadas à API e validará a resposta e o comportamento da aplicação, mas sem restringir implementações específicas de classes e métodos.
 - O projeto foi implementado utilizando o ecossistema Spring (Spring Boot, Spring Web, Spring Data, etc). 
 - O banco de dados utilizado foi o MySql.

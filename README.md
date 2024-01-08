@@ -33,7 +33,7 @@ das fazendas participantes. Esse produto será desenvolvido em fases.
 ## Como Executar
 
 <details>
-
+ <summary><strong> Passo a passo/strong></summary>
 1. Clone o repositório
 
 - Use o comando: `git clone <url do repositório>`

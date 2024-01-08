@@ -183,7 +183,7 @@ Exemplo de resposta:
 
 </details>
 
-### 1. Limitar acesso à rota GET /farms
+### 1. Limita acesso à rota GET /farms
 
 <details>
   <summary>Limitar acesso à rota GET /farms para pessoa autenticada com role correto</summary><br />
@@ -194,7 +194,7 @@ Você deve retornar status 403 caso a pessoa não tenha permissões corretas. Do
 
 </details>
 
-### 2. Limitar acesso à rota GET /crops
+### 2. Limita acesso à rota GET /crops
 
 <details>
   <summary>Limitar acesso à rota GET /crops para pessoa autenticada com role correto</summary><br />
@@ -205,7 +205,7 @@ Deve retornar status 403 caso a pessoa não tenha permissões corretas. Do contr
 
 </details>
 
-### 3. Limitar acesso à rota GET /fertilizers
+### 3. Limita acesso à rota GET /fertilizers
 
 <details>
   <summary>Limitar acesso à rota GET /fertilizers para pessoa autenticada com role correto</summary><br />

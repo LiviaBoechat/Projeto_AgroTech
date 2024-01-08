@@ -48,8 +48,18 @@ Nesse modelos, temos as seguintes tabelas:
 ## Rotas
 
  - GET `/farms`
+ - GET `/farms/id`
+ - GET `/farms/farmId/crops`
+ - POST `/farms`
+ - POST `/farms/farmId/crops`
  - GET `/crops`
+ - GET `/crops/id`
+ - GET `/crops/search`
+ - GET `/crops/cropId/fertilizers`
+ - POST `/crops/cropId/fertilizers/fertilizerId`
  - GET `/fertilizers`
+ - GET `/fertilizers/fertilizerId`
+ - POST `/fertilizers`
  - POST `/persons`
  - POST `/auth/login` 
 
